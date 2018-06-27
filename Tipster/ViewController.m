@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
+@property (weak, nonatomic) IBOutlet UIView *infoView;
 
 @end
 
@@ -21,9 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setDouble:0.15 forKey:@"default_tip"];
+    double doubleValue = [defaults doubleForKey:@"default_tip"];
+    
 }
 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    double doubleValue = [defaults doubleForKey:@"default_tip"];
+    //self.tipControl.selectedSegmentIndex
+    NSLog(@"View did appear");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -50,21 +62,21 @@
 
 - (IBAction)onEditingBegin:(id)sender {
     [UIView animateWithDuration:0.2 animations:^{
-        self.mealBillField.frame = CGRectMake(self.mealBillField.frame.origin.x, self.mealBillField.frame.origin.y + 30, self.mealBillField.frame.size.width, self.mealBillField.frame.size.height);
+        self.mealBillField.frame = CGRectMake(self.mealBillField.frame.origin.x, self.mealBillField.frame.origin.y - 213, self.mealBillField.frame.size.width, self.mealBillField.frame.size.height);
         
-        self.tipLabel.alpha = 0;
+        self.infoView.alpha = 1;
         
     }];
 }
 
 - (IBAction)onEditingEnd:(id)sender {
     CGRect newFrame = self.mealBillField.frame;
-    newFrame.origin.y -= 30;
+    newFrame.origin.y += 213;
     
     [UIView animateWithDuration:0.2 animations:^{
         self.mealBillField.frame = newFrame;
         
-        self.tipLabel.alpha = 1;
+        self.infoView.alpha = 0;
     }];
 }
 

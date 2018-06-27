@@ -15,6 +15,7 @@
 		33EA218720E2D97C009DFAA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA218620E2D97C009DFAA5 /* main.m */; };
 		33EA219120E2D97C009DFAA5 /* TipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA219020E2D97C009DFAA5 /* TipsterTests.m */; };
 		33EA219C20E2D97C009DFAA5 /* TipsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA219B20E2D97C009DFAA5 /* TipsterUITests.m */; };
+		33EA21AE20E3097A009DFAA5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA21AD20E3097A009DFAA5 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		33EA219720E2D97C009DFAA5 /* TipsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EA219B20E2D97C009DFAA5 /* TipsterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipsterUITests.m; sourceTree = "<group>"; };
 		33EA219D20E2D97C009DFAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33EA21AC20E3097A009DFAA5 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		33EA21AD20E3097A009DFAA5 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		33EA216B20E2D97A009DFAA5 = {
 			isa = PBXGroup;
 			children = (
+				33EA21AC20E3097A009DFAA5 /* SettingsViewController.h */,
+				33EA21AD20E3097A009DFAA5 /* SettingsViewController.m */,
 				33EA217620E2D97A009DFAA5 /* Tipster */,
 				33EA218F20E2D97C009DFAA5 /* TipsterTests */,
 				33EA219A20E2D97C009DFAA5 /* TipsterUITests */,
@@ -265,6 +270,7 @@
 				33EA217C20E2D97A009DFAA5 /* ViewController.m in Sources */,
 				33EA218720E2D97C009DFAA5 /* main.m in Sources */,
 				33EA217920E2D97A009DFAA5 /* AppDelegate.m in Sources */,
+				33EA21AE20E3097A009DFAA5 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
